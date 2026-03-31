@@ -1,0 +1,36 @@
+.navbar-custom[b-rog44nvhax] {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #000;
+    border-bottom: 3px solid #ffcc00;
+    padding: 0 20px;
+    height: 80px;
+}
+
+.brand[b-rog44nvhax] {
+    color: #ffcc00;
+    font-weight: bold;
+    font-size: 38px;
+    margin-right: 40px;
+}
+
+.nav-links[b-rog44nvhax] {
+    display: flex;
+    margin-left: auto
+}
+
+[b-rog44nvhax] .nav-link {
+    color: #ffffff !important;
+    font-size: 18px;
+    margin-right: 20px;
+    padding-bottom: 10px;
+}
+
+[b-rog44nvhax] .nav-link:hover, 
+[b-rog44nvhax] .nav-link.active {
+    color: #ffcc00 !important;
+    border-bottom: 1px solid #ffcc00 !important;
+    /* margin-bottom: px;  */
+    padding-bottom: 10px;
+}

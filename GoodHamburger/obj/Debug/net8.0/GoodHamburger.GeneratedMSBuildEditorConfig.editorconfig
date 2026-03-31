@@ -1,0 +1,59 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = GoodHamburger
+build_property.RootNamespace = GoodHamburger
+build_property.ProjectDir = /home/keven/Área de trabalho/C#/TesteVaga/GoodHamburger/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /home/keven/Área de trabalho/C#/TesteVaga/GoodHamburger
+build_property._RazorSourceGeneratorDebug = 
+
+[/home/keven/Área de trabalho/C\#/TesteVaga/GoodHamburger/Components/App.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9BcHAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/keven/Área de trabalho/C\#/TesteVaga/GoodHamburger/Components/CartView.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9DYXJ0Vmlldy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/keven/Área de trabalho/C\#/TesteVaga/GoodHamburger/Components/Pages/AllMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9BbGxNZW51LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/keven/Área de trabalho/C\#/TesteVaga/GoodHamburger/Components/Pages/Extras.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9FeHRyYXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/keven/Área de trabalho/C\#/TesteVaga/GoodHamburger/Components/Pages/Orders.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9PcmRlcnMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/keven/Área de trabalho/C\#/TesteVaga/GoodHamburger/Components/Pages/Sandwiches.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9TYW5kd2ljaGVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/keven/Área de trabalho/C\#/TesteVaga/GoodHamburger/Components/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Sb3V0ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/keven/Área de trabalho/C\#/TesteVaga/GoodHamburger/Components/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9fSW1wb3J0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/keven/Área de trabalho/C\#/TesteVaga/GoodHamburger/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-afvipnejxc
+
+[/home/keven/Área de trabalho/C\#/TesteVaga/GoodHamburger/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-rog44nvhax

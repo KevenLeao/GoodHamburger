@@ -1,0 +1,36 @@
+.navbar-custom {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #000;
+    border-bottom: 3px solid #ffcc00;
+    padding: 0 20px;
+    height: 80px;
+}
+
+.brand {
+    color: #ffcc00;
+    font-weight: bold;
+    font-size: 38px;
+    margin-right: 40px;
+}
+
+.nav-links {
+    display: flex;
+    margin-left: auto
+}
+
+::deep .nav-link {
+    color: #ffffff !important;
+    font-size: 18px;
+    margin-right: 20px;
+    padding-bottom: 10px;
+}
+
+::deep .nav-link:hover, 
+::deep .nav-link.active {
+    color: #ffcc00 !important;
+    border-bottom: 1px solid #ffcc00 !important;
+    /* margin-bottom: px;  */
+    padding-bottom: 10px;
+}

@@ -1,0 +1,41 @@
+@page "/sandwiches"
+@rendermode InteractiveServer
+@inject OrderService Order
+@using GoodHamburger.Models
+@using GoodHamburger.Services
+
+<div class="app-container">
+    <div class="content-wrapper">
+
+        @*Coluna da esquerda - itens *@
+        <div class="menu-side">
+            <h3>🍔 OUR SANDWICHES</h3>
+            <div class="card-grid">
+                @foreach (var item in MenuCompleto.Where(i => i.Categoria == "Sandwich"))
+                {
+                    <div class="card">
+                        <span>@item.Emoji</span>
+                        <h4>@item.Nome</h4>
+                        <p>@item.Preco.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("en-US"))</p>
+                        <button class="btn-add" @onclick="() => Order.Adicionar(item)">+ Add</button>
+                    </div>
+                }
+            </div>
+        </div>
+
+        @* Coluna da direita - pedido fixo *@
+        <aside class="cart-column">
+            <CartView /> 
+        </aside>
+    </div>
+</div>
+    
+@code {
+    // Referencia para o foreach
+    private List<ItemOrder> MenuCompleto = new()
+    {
+        new ItemOrder { Id=1, Nome="X Burger", Preco=5.00m, Categoria="Sandwich", Emoji="🍔", Descricao="Classic beef" },
+        new ItemOrder { Id=2, Nome="X Egg", Preco=4.50m, Categoria="Sandwich", Emoji="🍳", Descricao="Beef with egg" },
+        new ItemOrder { Id=3, Nome="X Bacon", Preco=7.00m, Categoria="Sandwich", Emoji="🥓", Descricao="Beef with bacon" }
+    };
+}

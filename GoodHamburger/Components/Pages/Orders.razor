@@ -1,0 +1,44 @@
+@page "/orders"
+@rendermode InteractiveServer
+@inject OrderService Order
+
+<div class="app-container">
+    <div style="max-width: 800px; margin: 40px auto;">
+        <h3>📋 ORDER HISTORY</h3>
+
+        @if (Order.HistoricoPedidos.Count == 0)
+        {
+            <div class="card" style="padding: 40px;">
+                <p>No orders yet. Start cooking! 👨‍🍳</p>
+            </div>
+        }
+        else
+        {
+            @foreach (var p in Order.HistoricoPedidos)
+            {
+                <div class="card" style="margin-bottom: 20px; text-align: left; border-left: 10px solid #FFCC00;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <strong>Order #@p.Id - @p.DataHora.ToShortTimeString()</strong>
+                        <span class="badge">@p.Status</span>
+                    </div>
+                    
+                    <p style="margin: 10px 0;">
+                        @string.Join(" + ", p.Itens.Select(i => i.Nome))
+                    </p>
+
+                    <div style="display: flex; gap: 10px; align-items: center; border-top: 2px solid #eee; pt-10">
+                        <strong>Total: @p.Total.ToString("C")</strong>
+                        
+                        <select class="status-select" @onchange="@(e => Order.AlterarStatus(p.Id, e.Value.ToString()))">
+                            <option value="Pending">Pending</option>
+                            <option value="Preparing">Preparing</option>
+                            <option value="Completed">Completed</option>
+                        </select>
+
+                        <button @onclick="() => Order.ExcluirPedido(p.Id)" style="border:none; background:none; cursor:pointer;">🗑️</button>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>

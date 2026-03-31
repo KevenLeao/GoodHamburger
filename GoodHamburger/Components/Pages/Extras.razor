@@ -1,0 +1,37 @@
+@page "/extras"
+@rendermode InteractiveServer
+@inject OrderService Order
+
+<div class="app-container">
+    <div class="content-wrapper">
+        
+        <div class="menu-side">
+            <h3>🍟 SIDES & DRINKS</h3>
+            <p>Complete your combo! (Max 1 of each)</p>
+            
+            <div class="card-grid">
+                @foreach (var item in MenuExtras)
+                {
+                    <div class="card">
+                        <div style="font-size: 3rem;">@item.Emoji</div>
+                        <h4>@item.Nome</h4>
+                        <p>@item.Preco.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("en-US"))</p>
+                        <button class="btn-add" @onclick="() => Order.Adicionar(item)">+ Add</button>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <aside class="cart-column">
+            <CartView /> 
+        </aside>
+    </div>
+</div>
+
+@code {
+    private List<ItemOrder> MenuExtras = new()
+    {
+        new ItemOrder { Id=4, Nome="Fries", Preco=2.00m, Categoria="Extra", Emoji="🍟" },
+        new ItemOrder { Id=5, Nome="Soft Drink", Preco=2.50m, Categoria="Extra", Emoji="🥤" }
+    };
+}

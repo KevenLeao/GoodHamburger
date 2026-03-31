@@ -1,0 +1,67 @@
+/* _content/GoodHamburger/Components/Layout/MainLayout.razor.rz.scp.css */
+.page[b-afvipnejxc] {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main[b-afvipnejxc] {
+    flex: 1;
+    background-color: white;
+    color: #1a1a1a;
+}
+
+.content[b-afvipnejxc] {
+    padding-top: 2rem;
+}
+
+.main-footer[b-afvipnejxc] {
+    background-color: #000;
+    text-align: center;
+    /* padding: 20px 0; */
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding-bottom: 20px;
+}
+
+.main-footer p[b-afvipnejxc] {
+    margin: 0;
+    color: #ffcc00;
+}
+/* _content/GoodHamburger/Components/Layout/NavMenu.razor.rz.scp.css */
+.navbar-custom[b-rog44nvhax] {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #000;
+    border-bottom: 3px solid #ffcc00;
+    padding: 0 20px;
+    height: 80px;
+}
+
+.brand[b-rog44nvhax] {
+    color: #ffcc00;
+    font-weight: bold;
+    font-size: 38px;
+    margin-right: 40px;
+}
+
+.nav-links[b-rog44nvhax] {
+    display: flex;
+    margin-left: auto
+}
+
+[b-rog44nvhax] .nav-link {
+    color: #ffffff !important;
+    font-size: 18px;
+    margin-right: 20px;
+    padding-bottom: 10px;
+}
+
+[b-rog44nvhax] .nav-link:hover, 
+[b-rog44nvhax] .nav-link.active {
+    color: #ffcc00 !important;
+    border-bottom: 1px solid #ffcc00 !important;
+    /* margin-bottom: px;  */
+    padding-bottom: 10px;
+}

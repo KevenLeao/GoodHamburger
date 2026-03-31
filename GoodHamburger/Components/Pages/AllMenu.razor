@@ -1,0 +1,86 @@
+@page "/"
+@rendermode InteractiveServer
+@using GoodHamburger.Models
+@using GoodHamburger.Services
+@inject OrderService Order
+
+<div class="app-container">
+    <div class="content-wrapper">
+    @*Coluna dos itens para o foreach*@
+        <div class="menu-side">
+    @*Sanduiches*@
+    <section class="menu-group">
+        <h3 class="category-title">🍔 BURGERS</h3>
+        <div class="card-grid">
+            @foreach (var item in MenuCompleto.Where(i => i.Categoria == "Sandwich"))
+            {
+                <div class="card">
+                    <div class="card-emoji">@item.Emoji</div>
+                    <h4>@item.Nome</h4>
+                    <p>@item.Preco.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("en-US"))</p>
+                    <button class="btn-add" @onclick="() => Order.Adicionar(item)">+ Add</button>
+                </div>
+            }
+        </div>
+    </section>
+
+    @*Extras*@
+    <section class="menu-group" style="margin-top: 40px;">
+        <h3 class="category-title">🍟 EXTRAS & DRINKS</h3>
+        <div class="card-grid">
+            @foreach (var item in MenuCompleto.Where(i => i.Categoria == "Extra"))
+            {
+                <div class="card">
+                    <div class="card-emoji">@item.Emoji</div>
+                    <h4>@item.Nome</h4>
+                    <p>@item.Preco.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("en-US"))</p>
+                    <button class="btn-add" @onclick="() => Order.Adicionar(item)">+ Add</button>
+                </div>
+            }
+        </div>
+    </section>
+</div>
+    @* Coluna do pedido e combo das promoções *@
+        <aside class="cart-column">
+            <CartView /> 
+
+            <div class="promo-box">
+        <h5>🔥 SPECIAL COMBOS</h5>
+        <ul class="promo-list">
+            <li>
+                <span class="combo-name">Full Combo</span>
+                <span class="combo-desc">Burger + Fries + Drink</span>
+                <span class="combo-badge">20% OFF</span>
+            </li>
+            <li>
+                <span class="combo-name">Hydrated Burger</span>
+                <span class="combo-desc">Burger + Drink</span>
+                <span class="combo-badge">15% OFF</span>
+            </li>
+            <li>
+                <span class="combo-name">Classic Combo</span>
+                <span class="combo-desc">Burger + Fries</span>
+                <span class="combo-badge">10% OFF</span>
+            </li>
+        </ul>
+        <p class="promo-footer">* Max 1 item per category</p>
+    </div>
+        </aside>
+
+    </div>
+</div>
+
+@code {
+    //Lista de referências do foreach
+    private List<ItemOrder> MenuCompleto = new()
+    {
+        // Sandubas
+        new ItemOrder { Id=1, Nome="X Burger", Preco=5.00m, Categoria="Sandwich", Emoji="🍔", Descricao="Classic beef patty" },
+        new ItemOrder { Id=2, Nome="X Egg", Preco=4.50m, Categoria="Sandwich", Emoji="🍳", Descricao="Beef patty with egg" },
+        new ItemOrder { Id=3, Nome="X Bacon", Preco=7.00m, Categoria="Sandwich", Emoji="🥓", Descricao="Beef patty with crispy bacon" },
+        
+        // Extras
+        new ItemOrder { Id=4, Nome="Fries", Preco=2.00m, Categoria="Extra", Emoji="🍟", Descricao="Crispy fries" },
+        new ItemOrder { Id=5, Nome="Soft Drink", Preco=2.50m, Categoria="Extra", Emoji="🥤", Descricao="Refreshing drink" }
+    };
+}

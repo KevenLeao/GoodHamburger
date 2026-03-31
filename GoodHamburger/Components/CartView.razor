@@ -1,0 +1,64 @@
+@using GoodHamburger.Services
+@inject OrderService Order
+
+@* System.Globalization.CultureInfo.GetCultureInfo("en-US")
+    muda o valor para formato dos EUA ($)*@
+
+<div class="order-container">
+    <h4>YOUR ORDER</h4>
+    
+    @if (!string.IsNullOrEmpty(Order.MensagemErro))
+    {
+        <div class="error-alert" style="color: red; border: 2px solid red; padding: 5px; margin-bottom: 10px; border-radius: 5px;">
+            ⚠️ @Order.MensagemErro
+        </div>
+    }
+
+    @if (Order.Carrinho.Count == 0)
+    {
+        <p>No items selected.</p>
+    }
+    else
+    {
+        <ul class="order-list" style="list-style: none; padding: 0;">
+            @foreach (var item in Order.Carrinho)
+            {
+                <li style="display: flex; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px dashed #000;">
+                    <span>@item.Nome</span>
+                    <span>@item.Preco.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("en-US"))</span>
+                    <button @onclick="() => Order.Remover(item)" style="color: red; cursor: pointer; border: none; background: none;">[x]</button>
+                </li>
+            }
+        </ul>
+        <div class="order-summary" style="margin-top: 15px; font-weight: bold;">
+            <p>Subtotal: @Order.Subtotal.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("en-US"))</p>
+            @if (Order.CalcularDesconto() > 0)
+            {
+                <p style="color: green;">Discount: -@Order.ValorDesconto.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("en-US")) (@(Order.CalcularDesconto() * 100)%)</p>
+            }
+            <p style="font-size: 1.2rem; border-top: 2px solid #000; pt-2">Total: @Order.TotalFinal.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("en-US"))</p>
+        </div>
+    }
+    @if (Order.Carrinho.Count > 0)
+{
+    <button class="btn-checkout" @onclick="Order.FinalizarPedido">
+        🚀 PLACE ORDER
+    </button>
+}
+</div>
+
+@implements IDisposable
+
+@code {
+    protected override void OnInitialized()
+    {
+        //Serviço unico pra escutar as mudanças do codigo
+        Order.OnChange += StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        //Finaliza o serviço ao fechar a página
+        Order.OnChange -= StateHasChanged;
+    }
+}

@@ -1,0 +1,29 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    background-color: white;
+    color: #1a1a1a;
+}
+
+.content {
+    padding-top: 2rem;
+}
+
+.main-footer {
+    background-color: #000;
+    text-align: center;
+    /* padding: 20px 0; */
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding-bottom: 20px;
+}
+
+.main-footer p {
+    margin: 0;
+    color: #ffcc00;
+}

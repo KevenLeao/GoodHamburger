@@ -1,0 +1,64 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/keven/Área de trabalho/C#/TesteVaga/GoodHamburger/GoodHamburger.csproj": {}
+  },
+  "projects": {
+    "/home/keven/Área de trabalho/C#/TesteVaga/GoodHamburger/GoodHamburger.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/keven/Área de trabalho/C#/TesteVaga/GoodHamburger/GoodHamburger.csproj",
+        "projectName": "GoodHamburger",
+        "projectPath": "/home/keven/Área de trabalho/C#/TesteVaga/GoodHamburger/GoodHamburger.csproj",
+        "packagesPath": "/home/keven/.nuget/packages/",
+        "outputPath": "/home/keven/Área de trabalho/C#/TesteVaga/GoodHamburger/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/keven/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.125/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
