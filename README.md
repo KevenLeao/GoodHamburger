@@ -30,4 +30,4 @@ A página "Orders" simula o gerenciamento de uma API:
 - Atualizar: Select de Status (Pending/Preparing/Completed).
 - Deletar: Ícone de lixeira em cada card de pedido.
 
-A estilização do sistema foi feita com muito CSS puro, para deixar uma view bonita e também utilizando emojis, que são interpretados pelas strings, trazendo uma parte visual bacana para o navegador (Exemplo: O emoji 🍔 tem o código U+1F354)
+A estilização do sistema foi feita com muito CSS puro, para deixar uma view bonita e também utilizando emojis, que são interpretados pelas strings, trazendo uma parte visual bacana para o navegador (Exemplo: O emoji 🍔 tem o código U+1F354).
